@@ -267,11 +267,11 @@ void DoActions(WinProcess& mem)
 			}
 			if (third_person = true)
 			{
-				mem.Write(g_Base  0x18d42d0 + 0x6C, 1);
+				mem.Write(g_Base + 0x18d42d0 + 0x6C, 1);
 			}
 			else if (third_person = false)
 			{
-				mem.Write(g_Base  0x18d42d0 + 0x6C, 0);
+				mem.Write(g_Base + 0x18d42d0 + 0x6C, 0);
 			}
 		}
 	}

@@ -1,7 +1,7 @@
 #define ORIGIN 1
 #define STEAM 2
 
-#define VERSION STEAM
+#define VERSION ORIGIN
 
 #if VERSION == STEAM
 
