@@ -46,6 +46,7 @@ uint64_t c_Base;
 bool next = false;
 bool valid = false;
 bool lock = false;
+bool third_person = false;
 
 typedef struct player
 {
@@ -256,10 +257,22 @@ void DoActions(WinProcess& mem)
 			}
 			spectators = tmp_spec;
 			allied_spectators = tmp_all_spec;
-			if(!lock)
+			if (!lock)
+			{
 				aimentity = tmp_aimentity;
+			}
 			else
+			{
 				aimentity = lastaimentity;
+			}
+			if (third_person = true)
+			{
+				mem.Write(g_Base  0x18d42d0 + 0x6C, 1);
+			}
+			else if (third_person = false)
+			{
+				mem.Write(g_Base  0x18d42d0 + 0x6C, 0);
+			}
 		}
 	}
 	actions_t = false;
@@ -571,6 +584,7 @@ static void set_vars(WinProcess& mem, uint64_t add_addr)
 	uint64_t smooth_addr = mem.Read<uint64_t>(add_addr + sizeof(uint64_t)*14);
 	uint64_t max_fov_addr = mem.Read<uint64_t>(add_addr + sizeof(uint64_t)*15);
 	uint64_t bone_addr = mem.Read<uint64_t>(add_addr + sizeof(uint64_t)*16);
+	uint64_t third_person_addr = mem.Read<uint64_t>(add_addr + sizeof(uint64_t) * 17);
 
 	if(mem.Read<int>(spec_addr)!=1)
 	{
@@ -602,6 +616,7 @@ static void set_vars(WinProcess& mem, uint64_t add_addr)
 			smooth = mem.Read<float>(smooth_addr);
 			max_fov = mem.Read<float>(max_fov_addr);
 			bone = mem.Read<int>(bone_addr);
+			third_person = mem.Read<bool>(third_person_addr);
 
 			if(esp && next)
 			{
