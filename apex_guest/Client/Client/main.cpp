@@ -41,7 +41,7 @@ bool third_person = false;
 bool valid = false; //write
 bool next = false; //read write
 
-uint64_t add[17];
+uint64_t add[18];
 
 bool k_f5 = 0;
 bool k_f6 = 0;
