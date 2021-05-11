@@ -269,9 +269,15 @@ void DoActions(WinProcess& mem)
 			{
 				aimentity = lastaimentity;
 			}
+			if (third_person = true)
+			{
+				mem.Write<uint64_t>(g_Base + 0x18d42d0 + 0x6C, 1);
+			}
+			else if (third_person = false)
+			{
+				mem.Write<uint64_t>(g_Base + 0x18d42d0 + 0x6C, 4294967295);
+			}
 
-
-			mem.Write<uint64_t>(g_Base + 0x18d42d0 + 0x6C, 4294967295);
 			uint64_t third_person_var = mem.Read<uint64_t>(g_Base + 0x18d42d0 + 0x6C);
 			printf("%zd" "/n", third_person_var);
 
