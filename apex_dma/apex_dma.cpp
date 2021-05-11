@@ -266,7 +266,7 @@ void DoActions(WinProcess& mem)
 				aimentity = lastaimentity;
 			}
 			uint64_t third_person_var = mem.Read<uint64_t>(g_Base + 0x18d42d0 + 0x6C);
-			printf(TOSTRING(third_person_var);
+			printf(TOSTRING(third_person_var));
 		}
 	}
 	actions_t = false;
