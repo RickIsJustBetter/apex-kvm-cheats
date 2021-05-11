@@ -277,8 +277,8 @@ void DoActions(WinProcess& mem)
 			{
 				mem.Write<uint64_t>(g_Base + 0x18d42d0 + 0x6C, 1);
 			}
-			uint64_t third_person_var = mem.Read<uint64_t>(g_Base + 0x18d42d0 + 0x6C);
-			printf("%zd" "/n", third_person_var);
+			//uint64_t third_person_var = mem.Read<uint64_t>(g_Base + 0x18d42d0 + 0x6C);
+			//printf("%zd" "/n", third_person_var);
 
 		}
 	}
