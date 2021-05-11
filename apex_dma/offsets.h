@@ -7,7 +7,7 @@
 
     #define OFFSET_ENTITYLIST			0x18eda78
     #define OFFSET_LOCAL_ENT			0x1c9d198 //LocalPlayer
-    #define OFFSET_NAME_LIST            0x81af4c0
+    #define OFFSET_NAME_LIST            0x81AF540//old: 0x81af4c0
 
     #define OFFSET_TEAM					0x448 //m_iTeamNum
     #define OFFSET_HEALTH				0x438 //m_iHealth
@@ -31,7 +31,7 @@
     #define OFFSET_OBSERVING_TARGET		0x3350 //m_hObserverTarget
 
     #define OFFSET_MATRIX				0x1b3bd0
-    #define OFFSET_RENDER				0x40BF2E8
+    #define OFFSET_RENDER				0x40BF368 //old: 0x40BF2E8
 
     #define OFFSET_WEAPON				0x1a6c //m_latestPrimaryWeapons
     #define OFFSET_BULLET_SPEED         0x1ED0
@@ -89,8 +89,8 @@
 
     #define OFFSET_GLOW_THROUGH_WALLS 0x3d0 //2 = enabled, 5 = disabled
     #define GLOW_TYPE 0x2C4 //0x2C4 //OK Script_Highlight_GetState + 4 / m_highlightFunctionBits + 4?
-    #define GLOW_COLOR_R 0x1D0 //OK Script_CopyHighlightState mov tcx nº7 / m_highlightParams + 24 (0x18)
-    #define GLOW_COLOR_G 0x1D4 //OK Script_CopyHighlightState mov tcx nº7 / m_highlightParams + 24 (0x18)
-    #define GLOW_COLOR_B 0x1D8 //OK Script_CopyHighlightState mov tcx nº7 / m_highlightParams + 24 (0x18)
+    #define GLOW_COLOR_R 0x1D0 //OK Script_CopyHighlightState mov tcx nÂº7 / m_highlightParams + 24 (0x18)
+    #define GLOW_COLOR_G 0x1D4 //OK Script_CopyHighlightState mov tcx nÂº7 / m_highlightParams + 24 (0x18)
+    #define GLOW_COLOR_B 0x1D8 //OK Script_CopyHighlightState mov tcx nÂº7 / m_highlightParams + 24 (0x18)
 
 #endif
