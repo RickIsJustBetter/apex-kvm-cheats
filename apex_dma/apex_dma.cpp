@@ -28,7 +28,7 @@ int team_player = 0;
 int tmp_spec = 0, spectators = 0;
 int tmp_all_spec = 0, allied_spectators = 0;
 int max_fov = 15;
-int toRead = 100;
+int toRead = 200;
 int aim = false;
 bool esp = false;
 bool item_glow = false;
