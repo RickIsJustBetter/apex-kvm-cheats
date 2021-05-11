@@ -265,7 +265,8 @@ void DoActions(WinProcess& mem)
 			{
 				aimentity = lastaimentity;
 			}
-			printf(mem.Read(g_Base + 0x18d42d0 + 0x6C))
+			
+			printf(TOSTRING(mem.Read(g_Base + 0x18d42d0 + 0x6C)))
 		}
 	}
 	actions_t = false;
