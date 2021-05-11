@@ -720,7 +720,7 @@ static void init()
 		bool apex_found = false;
 		bool client_found = false;
 		//Client "add" offset
-		uint64_t add_off = 0x3e870;
+		uint64_t add_off = 0x3e890;
 		
 		while(active)
 		{
