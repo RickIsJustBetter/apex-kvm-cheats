@@ -273,9 +273,7 @@ void DoActions(WinProcess& mem)
 				aimentity = lastaimentity;
 			}
 
-
-			string third_person_var = genString(mem.Read<uint64_t>(g_Base + 0x18d42d0 + 0x6C));
-			std::cout << third_person_var;
+		std:cout << mem.Read<uint64_t>(g_Base + 0x18d42d0 + 0x6C);
 
 		}
 	}
