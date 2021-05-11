@@ -235,12 +235,12 @@ int main(int argc, char** argv)
 		if (IsKeyDown(VK_F9) && k_f9 == 0)
 		{
 			k_f8 = 1;
-			third_person = TRUE;
+			third_person = false;
 		}
 		else if (!IsKeyDown(VK_F9) && k_f9 == 1)
 		{
 			k_f9 = 0;
-			third_person = FALSE;
+			third_person = false;
 		}
 
 		if (IsKeyDown(VK_LEFT))
