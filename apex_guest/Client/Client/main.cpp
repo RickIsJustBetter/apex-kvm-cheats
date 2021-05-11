@@ -231,18 +231,6 @@ int main(int argc, char** argv)
 		{
 			k_f8 = 0;
 		}
-
-		if (IsKeyDown(VK_F9) && k_f9 == 0)
-		{
-			k_f8 = 1;
-			third_person = false;
-		}
-		else if (!IsKeyDown(VK_F9) && k_f9 == 1)
-		{
-			k_f9 = 0;
-			third_person = false;
-		}
-
 		if (IsKeyDown(VK_LEFT))
 		{
 			if (max_dist > 100.0f * 40.0f)
