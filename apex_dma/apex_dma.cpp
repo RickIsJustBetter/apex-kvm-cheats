@@ -77,12 +77,6 @@ float lastvis_aim[100];
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
-string genString(uint64_t val)
-{
-	char temp[21];
-	sprintf(temp, "%z", val);
-	return temp;
-}
 void ProcessPlayer(WinProcess& mem, Entity& LPlayer, Entity& target, uint64_t entitylist, int index)
 {
 	int entity_team = target.getTeamId();
