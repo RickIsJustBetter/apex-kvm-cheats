@@ -8,6 +8,7 @@
 #include <cfloat>
 #include "Game.h"
 #include <thread>
+#include <string>
 
 #define STRINGIFY(x) #x
 #define TOSTRING(x) STRINGIFY(x)
@@ -76,6 +77,12 @@ float lastvis_aim[100];
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
+string genString(uint64_t val)
+{
+	char temp[21];
+	sprintf(temp, "%z", val);
+	return temp;
+}
 void ProcessPlayer(WinProcess& mem, Entity& LPlayer, Entity& target, uint64_t entitylist, int index)
 {
 	int entity_team = target.getTeamId();
@@ -265,8 +272,11 @@ void DoActions(WinProcess& mem)
 			{
 				aimentity = lastaimentity;
 			}
-			uint64_t third_person_var = mem.Read<uint64_t>(g_Base + 0x18d42d0 + 0x6C);
-			printf(TOSTRING(third_person_var));
+
+
+			string third_person_var = genString(mem.Read<uint64_t>(g_Base + 0x18d42d0 + 0x6C));
+			std::cout << third_person_var;
+
 		}
 	}
 	actions_t = false;
