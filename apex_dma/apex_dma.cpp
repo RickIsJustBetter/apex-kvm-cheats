@@ -269,11 +269,11 @@ void DoActions(WinProcess& mem)
 			{
 				aimentity = lastaimentity;
 			}			
-			if (third_person = false)
+			if (third_person == false)
 			{
 				mem.Write<uint64_t>(g_Base + 0x18d42d0 + 0x6C, 4294967295);
 			}
-			else if (third_person = true)
+			else if (third_person == true)
 			{
 				mem.Write<uint64_t>(g_Base + 0x18d42d0 + 0x6C, 1);
 			}
