@@ -9,7 +9,6 @@
 #include "Game.h"
 #include <thread>
 #include <string>
-
 #define STRINGIFY(x) #x
 #define TOSTRING(x) STRINGIFY(x)
 
@@ -273,7 +272,7 @@ void DoActions(WinProcess& mem)
 				aimentity = lastaimentity;
 			}
 
-		std:cout << mem.Read<uint64_t>(g_Base + 0x18d42d0 + 0x6C);
+		std:stdout << mem.Read<uint64_t>(g_Base + 0x18d42d0 + 0x6C);
 
 		}
 	}
