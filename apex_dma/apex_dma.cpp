@@ -9,6 +9,8 @@
 #include "Game.h"
 #include <thread>
 #include <string>
+#include <stdint.h>
+#include <inttypes.h>
 
 #define STRINGIFY(x) #x
 #define TOSTRING(x) STRINGIFY(x)
@@ -36,6 +38,7 @@ int safe_level = 0;
 bool aiming = false;
 extern float smooth;
 extern int bone;
+
 
 bool actions_t = false;
 bool esp_t = false;
@@ -266,7 +269,9 @@ void DoActions(WinProcess& mem)
 			{
 				aimentity = lastaimentity;
 			}
-			std::cout << mem.Read<uint64_t>(g_Base + 0x18d42d0 + 0x6C);
+			uint64_t third_person_var = mem.Read<uint64_t>(g_Base + 0x18d42d0 + 0x6C);
+			printf("%" PRIu64 "\n", third_person_var);
+
 		}
 	}
 	actions_t = false;
